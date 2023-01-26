@@ -2,6 +2,9 @@ package design.patterns;
 
 import reflection.ISearchService;
 
+import javax.naming.PartialResultException;
+import java.awt.print.PrinterAbortException;
+import java.io.InvalidClassException;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -23,11 +26,11 @@ public class SearchService implements ISearchService {
     }
 
     @Override
-    public Customer getCustomerByLastName(String lname) throws Exception {
+    public Customer getCustomerByLastName(String lname) throws Exception{
         if (lname == null) {
             throw new Exception("String is null");
         }
-
+        
         return customerMap.values().stream()
                                    .filter(x-> x.getLname().equals(lname))
                                    .findFirst()

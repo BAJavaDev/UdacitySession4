@@ -13,6 +13,7 @@ public class TimeInterceptor implements InvocationHandler {
         this.targetObject = delegate;
     }
 
+
     @Override
     public Object invoke(Object proxy, Method method, Object[] args) throws Throwable {
         Instant startTime = Instant.now();

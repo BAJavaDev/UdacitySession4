@@ -13,6 +13,7 @@ public class Client {
                 System.out.println("1. First Name");
                 System.out.println("2. Last Name");
                 System.out.println("3. Exit");
+
                 String choice = input.nextLine();
 
                 if ("3".equalsIgnoreCase(choice)) {
@@ -33,7 +34,7 @@ public class Client {
                     break;
 
                     default:
-                        System.out.println("Input did not match");
+                        System.out.println("Input did not match any menu items");
                         continue;
                 }
             } catch (Exception e) {

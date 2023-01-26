@@ -1,5 +1,8 @@
 package design.patterns;
 
+import java.awt.print.PrinterAbortException;
+import java.io.InvalidClassException;
+
 public class SearchResource {
      private static SearchResource searchResource;
      private SearchService searchService = SearchService.getInstance();
